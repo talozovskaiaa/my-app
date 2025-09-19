@@ -1,11 +1,11 @@
 package ru.netology.rest;
 
-import io.restassured.http.ContentType;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-class MobileBankApiTestV2 {
+class MobileBankApiTestV1 {
     @Test
     void shouldReturnDemoAccounts() {
         // Given - When - Then
@@ -17,10 +17,6 @@ class MobileBankApiTestV2 {
                 .get("/demo/accounts")
                 // Проверки
                 .then()
-                .statusCode(200)
-                .header("Content-Type", "application/json; charset=UTF-8")
-                // специализированные проверки - лучше
-                .contentType(ContentType.JSON)
-        ;
+                .statusCode(200);
     }
 }
