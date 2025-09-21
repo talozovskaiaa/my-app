@@ -1,4 +1,4 @@
-package ru.netology.rest;
+package ru.neotology.rest;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import org.junit.jupiter.api.Test;
